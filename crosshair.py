@@ -1,5 +1,6 @@
 from tkinter import *
 from pynput.keyboard import Listener, Key
+import os
 
 root = Tk()
 
@@ -38,7 +39,8 @@ def on_press(key):
 if __name__ == "__main__":
     listener = Listener(on_press=on_press)
 
-    root.image = PhotoImage(file="cross_square.png")
+    ws = os.path.dirname(__file__)
+    root.image = PhotoImage(file=f"{ws}/images/cross_square.png")
     root.image = root.image.zoom(10)
     root.image = root.image.subsample(20)
     root.geometry(f"+{int(middle[0])}+{int(middle[1])}")
