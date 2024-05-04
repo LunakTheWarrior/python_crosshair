@@ -1,5 +1,5 @@
 MODULE.bazel.lock
-bazel-out/
-bazel-python_crosshair/
-bazel-bin/
-bazel-testlogs/
+bazel-out
+bazel-python_crosshair
+bazel-bin
+bazel-testlogs
